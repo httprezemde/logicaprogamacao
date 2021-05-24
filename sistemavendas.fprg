@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Matheus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-05-23 09:16:46 "/>
+        <attribute name="created" value="TWF0aGV1cztKQVJWSVM7MjAyMS0wNS0yMzsiMDc6NDc6MTQgIjsyMzgz"/>
+        <attribute name="edited" value="TWF0aGV1cztKQVJWSVM7MjAyMS0wNS0yMzsiMDk6MTY6NDYgIjsyOzI0OTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="produto, cart&#227;o" type="Integer" array="False" size=""/>
+            <assign variable="produto" expression="500"/>
+            <declare name="resposta" type="Boolean" array="False" size=""/>
+            <declare name="cliente" type="String" array="False" size=""/>
+            <declare name="numero" type="String" array="False" size=""/>
+            <output expression="&quot;BEM VINDO! Voc&#234; j&#225; &#233; um cliente da RZD LTDA?&quot;" newline="True"/>
+            <input variable="resposta"/>
+            <if expression="resposta = true">
+                <then>
+                    <output expression="&quot;Poderia nos informar seu nome completo?&quot;" newline="True"/>
+                </then>
+                <else>
+                    <breakpoint/>
+                </else>
+            </if>
+            <input variable="cliente"/>
+            <output expression="&quot;Escolha a op&#231;&#227;o de pagamento desejada.&#13;&#10;Tecle 1 para d&#233;bito e 2 para cr&#233;dito&quot;" newline="True"/>
+            <input variable="cart&#227;o"/>
+            <if expression="cart&#227;o&gt;=2">
+                <then>
+                    <output expression="&quot;N&#227;o cobramos taxas adicionais com pagamento no d&#233;bito!&quot;" newline="True"/>
+                    <output expression="&quot;Informe o n&#250;mero do seu cart&#227;o de d&#233;bito!&quot;" newline="True"/>
+                    <input variable="numero"/>
+                    <output expression="&quot;O valor a ser pago &#233;: R$ &quot; &amp;produto" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Os valores para compras no cart&#227;o de cr&#233;dito s&#227;o acrescidos em 50%. &quot;" newline="True"/>
+                    <output expression="&quot;Informe o n&#250;mero de seu cart&#227;o de cr&#233;dito!&quot;" newline="True"/>
+                    <input variable="numero"/>
+                    <assign variable="produto" expression="(produto*2)"/>
+                    <output expression="&quot;O valor a ser pago &#233;: R$ &quot; &amp;produto" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Matheus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-05-23 07:46:04 "/>
+        <attribute name="created" value="TWF0aGV1cztKQVJWSVM7MjAyMS0wNS0yMzsiMTI6MTY6MzMgIjsyMzc2"/>
+        <attribute name="edited" value="TWF0aGV1cztKQVJWSVM7MjAyMS0wNS0yMzsiMDc6NDY6MDQgIjsxOzI0ODk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="janeiro, fevereiro, mar&#231;o, abril, media" type="Integer" array="False" size=""/>
+            <input variable="janeiro"/>
+            <input variable="fevereiro"/>
+            <input variable="mar&#231;o"/>
+            <input variable="abril"/>
+            <assign variable="media" expression="(janeiro+fevereiro+mar&#231;o+abril)/4"/>
+            <if expression="media&gt;=5000">
+                <then>
+                    <output expression="&quot;PARAB&#201;NS! Seu trabalho duro foi reconhecido e voc&#234; foi contemplado com um abono de 10%!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Continue trabalhando duro!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
